@@ -1,0 +1,35 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo h2{
+    font-weight: normal;
+}
+
+
+.nav a{
+    display: inline-block;
+    position: relative;
+    margin:0px 10px;
+    color: #00aaff;
+  }
+  
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
